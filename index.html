@@ -180,9 +180,14 @@
         <p>欢迎来到我的博客，接下来我们讲讲JAVA</p>
 <h2 id="Java简介"><a href="#Java简介" class="headerlink" title="Java简介"></a>Java简介</h2><p>   Java是由Sun Microsystems公司于1995年5月推出的Java面向对象程序设计语言和Java平台的总称。由James Gosling和同事们共同研发，并在1995年正式推出。</p>
 <p>Java分为三个体系：</p>
-<p>+JavaSE（J2SE）（Java2 Platform Standard Edition，java平台标准版）</p>
-<p>+JavaEE(J2EE)(Java 2 Platform,Enterprise Edition，java平台企业版)</p>
-<p>+JavaME(J2ME)(Java 2 Platform Micro Edition，java平台微型版)。</p>
+<ul>
+<li><p>JavaSE（J2SE）（Java2 Platform Standard Edition，java平台标准版）</p>
+</li>
+<li><p>JavaEE(J2EE)(Java 2 Platform,Enterprise Edition，java平台企业版)</p>
+</li>
+<li><p>JavaME(J2ME)(Java 2 Platform Micro Edition，java平台微型版)。</p>
+</li>
+</ul>
 <h2 id="Java主要特征"><a href="#Java主要特征" class="headerlink" title="Java主要特征"></a>Java主要特征</h2><p>  1.Java语言是简单的</p>
 <p>  2.Java语言是面向对象的</p>
 <p>  3.Java语言是分布式的</p>
@@ -214,6 +219,60 @@
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> HANXINHAHX</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">  </span><br></pre></td></tr></table></figure>
 
 <p> &nbsp;&nbsp;&nbsp;&nbsp;注意：作者信息要打在包名下，先输入”/**”再回车，或者按住alt+shift+j </p>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>  &nbsp;&nbsp;&nbsp;&nbsp;标识符是定义一些符号作为包、类、变量、常量、方法等的名称，通俗地说就是取名字。标识符由数字、字母、下划线以及美元（$）符组成。注意：标识符不能以数字开头，不能用JAVA中的关键字，命名规则通常以驼峰式为主（第二个单词头字母大写，其它小写），区分大小写。标识符要取的通俗易懂关键字是一些有特殊含义的标识符，在程序中有着重要的意义，这些字符不能用来做其他的标识符。具体的请参照：<a href="https://cn.bing.com/images/search?view=detailV2&ccid=bj6aubOb&id=0322101F6AD1DBC6BB8CEB866B6EE94BFC1DC65B&thid=OIP.bj6aubObTYwVNBXaeOEjwwHaDM&mediaurl=http%3a%2f%2fwww.hubwiz.com%2fcourse%2f555168bdd0e6565213f19fa3%2fkey_word.png&exph=270&expw=625&q=JAVA%e5%85%b3%e9%94%ae%e5%ad%97&simid=608042578448158594&selectedIndex=5&ajaxhist=0" target="_blank" rel="noopener">Java关键字</a></p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>  &nbsp;&nbsp;&nbsp;&nbsp;机本质上是对不同的数据进行处理，而数据又分为多种类型，因此，我们有必要先去了解JAVA中的数据类型，这是接下来学习的重要基础。</p>
+<h4 id="1-整数类型（整型）"><a href="#1-整数类型（整型）" class="headerlink" title="1.整数类型（整型）"></a>1.整数类型（整型）</h4><p>  &nbsp;&nbsp;;&nbsp;&nbsp;整数类型数据类型是用来存储整数数值的，没有小数部分根据存储的数据大小以及所占存储空间大小可分为以下4种：byte、short、int、long。具体数值范围见下表:</p>
+<table>
+<thead>
+<tr>
+<th>类型名</th>
+<th align="center">占用空间</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td align="center">8位（1个字节）</td>
+<td>-2<sup>7</sup>~2<sup>7</sup>-1</td>
+</tr>
+<tr>
+<td>short</td>
+<td align="center">16位（2个字节）</td>
+<td>-2<sup>15</sup>~0<sup>15</sup>-1</td>
+</tr>
+<tr>
+<td>int</td>
+<td align="center">32位（4个字节）</td>
+<td>-2<sup>31</sup>~2<sup>31</sup>-1</td>
+</tr>
+<tr>
+<td>long</td>
+<td align="center">64位（8个字节）</td>
+<td>-2<sup>63</sup>~2<sup>63</sup>-1</td>
+</tr>
+</tbody></table>
+<h4 id="2-浮点型数据类型"><a href="#2-浮点型数据类型" class="headerlink" title="2.浮点型数据类型"></a>2.浮点型数据类型</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;浮点型数据类型是存储小数数值，分为float和double，double的精度更高，如下表：</p>
+<table>
+<thead>
+<tr>
+<th>类型名</th>
+<th align="center">占用空间</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td align="center">32位（8个字节）</td>
+<td>1.4E-45至3.4E+38,-3.4E+38至-1.42E-45</td>
+</tr>
+<tr>
+<td>short</td>
+<td align="center">16位（2个字节）</td>
+<td>4.9E-324至1.7E+308,-1.7E+308至-4.9E-324</td>
+</tr>
+</tbody></table>
+<h4 id="3-字符数据类型"><a href="#3-字符数据类型" class="headerlink" title="3.字符数据类型"></a>3.字符数据类型</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;字符类型用于存储一个单一的字符（不是字符串），在JAVA中用char表示，每个char类型的变量都会站两个字节，需要用一个英文半角格式的单引号括起来，实质上是存储将字符的ASCⅡ码，范围为0~65535，也可以直接把赋给char类型变量一个整数，表示字符的ASCⅡ码。</p>
+<h4 id="4-布尔数据类型"><a href="#4-布尔数据类型" class="headerlink" title="4.布尔数据类型"></a>4.布尔数据类型</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;布尔数据类型用来存储布尔值，在JAVA中用boolean表示，有true和false两个值。</p>
 
       
 
