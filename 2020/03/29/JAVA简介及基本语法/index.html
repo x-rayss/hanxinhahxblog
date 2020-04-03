@@ -16,7 +16,7 @@
 <meta property="og:description" content="欢迎来到我的博客，接下来我们讲讲JAVA Java简介   Java是由Sun Microsystems公司于1995年5月推出的Java面向对象程序设计语言和Java平台的总称。由James Gosling和同事们共同研发，并在1995年正式推出。 Java分为三个体系：  JavaSE（J2SE）（Java2 Platform Standard Edition，java平台标准版）  Java">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-29T09:08:22.000Z">
-<meta property="article:modified_time" content="2020-04-02T03:42:17.949Z">
+<meta property="article:modified_time" content="2020-04-03T12:11:48.603Z">
 <meta property="article:author" content="hanxinhahx">
 <meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary">
@@ -275,6 +275,186 @@
 <h4 id="4-布尔数据类型"><a href="#4-布尔数据类型" class="headerlink" title="4.布尔数据类型"></a>4.布尔数据类型</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;布尔数据类型用来存储布尔值，在JAVA中用boolean表示，有true和false两个值。</p>
 <h3 id="变量类型转换"><a href="#变量类型转换" class="headerlink" title="变量类型转换"></a>变量类型转换</h3><h4 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h4><p> &nbsp;&nbsp;&nbsp;&nbsp; 自动类型转换又叫隐式类型转换，指的是两种数据类型在转换的过程中不需要进行显式地进行申明。要实现自动类型转换，必须用时满足两个条件：①两种数据类型彼此兼容。②转换后的数据类型范围要大于原类型。<br> &nbsp;&nbsp;&nbsp;&nbsp;可以进行自动类型转换的情况如下：</p>
 <p> 1.整数类型之间可以实现转换。如byte类型的数据可以转换成short、int、long类型的变量，short、char类型数据可以赋值给int、long类型，int可以赋值给long类型。<br> 2.整型类型可以转换成float类型，如nyte、short、int、char类型的变量可以赋值给float类型的变量。<br> 3.除double自身以外，其他几种数据类型都可以转换成double类型变量。</p>
+<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><p>  &nbsp;&nbsp;&nbsp;&nbsp;  强制类型转换也称为显式类型转换，指的是两种数据转换需要进行显式的声明。当两种数据类型彼此不兼容，或者范围小于要转的数据类型，这时就需要强制类型转换。<br>  &nbsp;&nbsp;&nbsp;&nbsp; 例：将long类型转换成int</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> a;</span><br><span class="line"><span class="keyword">int</span> b=(<span class="keyword">int</span>)a;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;目标类型 变量名=（目标类型）值;</p>
+<h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><p> &nbsp;&nbsp;&nbsp;&nbsp;变量要定义之后才可以使用，但是并不意味着定义好的变量可以一直使用，它也有自己的作用范围，这个范围就是作用域。在一个程序中在一个大括号中定义变量，则这个变量的作用域就在这个范围之内，且在变量定义语句之后，超出这个范围就不能使用该变量。如下程序：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">1</span>;</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">int</span> b=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"a="</span>+a);</span><br><span class="line">System.out.println(<span class="string">"b="</span>+b);</span><br><span class="line"></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<p> 程序中的第二句语句晖报错，因为超出了b的定义域，但是a没有超出定义域。</p>
+<h3 id="运算符-1"><a href="#运算符-1" class="headerlink" title="运算符"></a>运算符</h3><h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1.算术运算符"></a>1.算术运算符</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;算术运算符是JAVA中用于处理四则运算的运算符，接下来看下面一张表格来解释。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th align="center">运算</th>
+<th align="center">范例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td align="center">正号</td>
+<td align="center">+3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>-</td>
+<td align="center">负号</td>
+<td align="center">b=4;-b</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>+</td>
+<td align="center">加</td>
+<td align="center">5+5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>-</td>
+<td align="center">减</td>
+<td align="center">5-5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>*</td>
+<td align="center">乘</td>
+<td align="center">5*5</td>
+<td>25</td>
+</tr>
+<tr>
+<td>/</td>
+<td align="center">除</td>
+<td align="center">5/5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>%</td>
+<td align="center">取模（取余数）</td>
+<td align="center">7%5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>++</td>
+<td align="center">自增（前）</td>
+<td align="center">a=2;b=++a;</td>
+<td>a=3;b=3</td>
+</tr>
+<tr>
+<td>++</td>
+<td align="center">自增（后）</td>
+<td align="center">a=2;b=a++;</td>
+<td>a=3;b=2</td>
+</tr>
+<tr>
+<td>- -</td>
+<td align="center">自减（前）</td>
+<td align="center">a=2;b=- -a;</td>
+<td>a=1;b=1;</td>
+</tr>
+<tr>
+<td>- -</td>
+<td align="center">自减（后）</td>
+<td align="center">a=2;b=a- -;</td>
+<td>a=1;b=2;</td>
+</tr>
+</tbody></table>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;注意：自增和自减符号不同位置结果也不同，可以认为：符号在变量前，则先进行自增/自减，然后参与其他运算，而符号在后，则先进行其他运算，再进行自增/自减运算。</p>
+<h4 id="2-赋值运算符"><a href="#2-赋值运算符" class="headerlink" title="2.赋值运算符"></a>2.赋值运算符</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;赋值运算符是将常量变量、表达式的值赋给某个变量。见下表。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th align="center">运算</th>
+<th align="center">范例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-</td>
+<td align="center">赋值</td>
+<td align="center">a=3;b=2</td>
+<td>a=3;b=2</td>
+</tr>
+<tr>
+<td>+=</td>
+<td align="center">加等于</td>
+<td align="center">a=3;b=2;a+=b</td>
+<td>a=5;b=2</td>
+</tr>
+<tr>
+<td>-=</td>
+<td align="center">减等于</td>
+<td align="center">a=3;b=2;a-=b</td>
+<td>a=1;b=2</td>
+</tr>
+<tr>
+<td>*=</td>
+<td align="center">乘等于</td>
+<td align="center">a=3;b=2;a*=b</td>
+<td>a=6;b=2</td>
+</tr>
+<tr>
+<td>/=</td>
+<td align="center">除等于</td>
+<td align="center">a=3;b=2;a/=b</td>
+<td>a=1;b=2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td align="center">取模等于</td>
+<td align="center">a=3;b=2;a%=b</td>
+<td>a=1;b=2</td>
+</tr>
+</tbody></table>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;注意：赋值过程中，运算顺序从右向左，将右边表达式的结果赋给左边变量。需要注意以下两点：<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.在java中可以通过一句语句给多个变量进行赋值，如“x=y=z=1”<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.赋值运算符的优先级较低，我们在之后的运算符优先级中会详细讲到。所以，应先进行其他运算，最后再进行赋值运算。几个特殊的赋值运算符也遵守这样的规则，例如“a+=b”，它的意思为“a=a+b”，其他几个也同理。</p>
+<h4 id="3-比较运算符"><a href="#3-比较运算符" class="headerlink" title="3.比较运算符"></a>3.比较运算符</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;比较运算符用于对两个常量或者两个变量的值进行比较，返回true或false，如下表：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th align="center">运算</th>
+<th align="center">范例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>==</td>
+<td align="center">相等</td>
+<td align="center">4==3</td>
+<td>false</td>
+</tr>
+<tr>
+<td>!=</td>
+<td align="center">不相等</td>
+<td align="center">4！=3</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td align="center">小于</td>
+<td align="center">4&lt;3</td>
+<td>false</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td align="center">大于</td>
+<td align="center">4&gt;3</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td align="center">小于等于</td>
+<td align="center">4&lt;=3</td>
+<td>false</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td align="center">大于等于</td>
+<td align="center">4&gt;=3</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;注意：不要将算术运算符中的“=”与比较运算符中的“==”混淆。</p>
 
       
 
@@ -387,7 +567,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java简介"><span class="toc-number">1.</span> <span class="toc-text">Java简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java主要特征"><span class="toc-number">2.</span> <span class="toc-text">Java主要特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK及Eclipse的安装"><span class="toc-number">3.</span> <span class="toc-text">JDK及Eclipse的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK安装"><span class="toc-number">3.1.</span> <span class="toc-text">JDK安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eclipse安装"><span class="toc-number">3.2.</span> <span class="toc-text">Eclipse安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java第一个程序"><span class="toc-number">3.3.</span> <span class="toc-text">Java第一个程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基础语法"><span class="toc-number">4.</span> <span class="toc-text">Java基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构简介"><span class="toc-number">4.1.</span> <span class="toc-text">结构简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-number">4.2.</span> <span class="toc-text">注释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-单行注释"><span class="toc-number">4.2.1.</span> <span class="toc-text">1.单行注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-块注释"><span class="toc-number">4.2.2.</span> <span class="toc-text">2.块注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-文档注释"><span class="toc-number">4.2.3.</span> <span class="toc-text">3.文档注释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-number">4.3.</span> <span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">4.4.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-整数类型（整型）"><span class="toc-number">4.4.1.</span> <span class="toc-text">1.整数类型（整型）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-浮点型数据类型"><span class="toc-number">4.4.2.</span> <span class="toc-text">2.浮点型数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-字符数据类型"><span class="toc-number">4.4.3.</span> <span class="toc-text">3.字符数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-布尔数据类型"><span class="toc-number">4.4.4.</span> <span class="toc-text">4.布尔数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量类型转换"><span class="toc-number">4.5.</span> <span class="toc-text">变量类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#自动类型转换"><span class="toc-number">4.5.1.</span> <span class="toc-text">自动类型转换</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java简介"><span class="toc-number">1.</span> <span class="toc-text">Java简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java主要特征"><span class="toc-number">2.</span> <span class="toc-text">Java主要特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK及Eclipse的安装"><span class="toc-number">3.</span> <span class="toc-text">JDK及Eclipse的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK安装"><span class="toc-number">3.1.</span> <span class="toc-text">JDK安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eclipse安装"><span class="toc-number">3.2.</span> <span class="toc-text">Eclipse安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java第一个程序"><span class="toc-number">3.3.</span> <span class="toc-text">Java第一个程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java基础语法"><span class="toc-number">4.</span> <span class="toc-text">Java基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构简介"><span class="toc-number">4.1.</span> <span class="toc-text">结构简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-number">4.2.</span> <span class="toc-text">注释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-单行注释"><span class="toc-number">4.2.1.</span> <span class="toc-text">1.单行注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-块注释"><span class="toc-number">4.2.2.</span> <span class="toc-text">2.块注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-文档注释"><span class="toc-number">4.2.3.</span> <span class="toc-text">3.文档注释</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-number">4.3.</span> <span class="toc-text">标识符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">4.4.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-整数类型（整型）"><span class="toc-number">4.4.1.</span> <span class="toc-text">1.整数类型（整型）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-浮点型数据类型"><span class="toc-number">4.4.2.</span> <span class="toc-text">2.浮点型数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-字符数据类型"><span class="toc-number">4.4.3.</span> <span class="toc-text">3.字符数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-布尔数据类型"><span class="toc-number">4.4.4.</span> <span class="toc-text">4.布尔数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量类型转换"><span class="toc-number">4.5.</span> <span class="toc-text">变量类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#自动类型转换"><span class="toc-number">4.5.1.</span> <span class="toc-text">自动类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#强制类型转换"><span class="toc-number">4.5.2.</span> <span class="toc-text">强制类型转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-number">4.6.</span> <span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符-1"><span class="toc-number">4.7.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-算术运算符"><span class="toc-number">4.7.1.</span> <span class="toc-text">1.算术运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-赋值运算符"><span class="toc-number">4.7.2.</span> <span class="toc-text">2.赋值运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-比较运算符"><span class="toc-number">4.7.3.</span> <span class="toc-text">3.比较运算符</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
