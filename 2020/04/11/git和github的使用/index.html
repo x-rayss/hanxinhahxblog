@@ -16,9 +16,9 @@
 <meta property="og:description" content="简介  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Git是一种分布式版本，可以对代码进行高效地控制，能够很好地对代码进行版本控制，能够进行版本回退，还可以将代码发送到远程的仓库或服务器中，实现团队协作等，我们接下来从最基础发部分开始讲，慢慢深入。在我博客友链的视频教程中有同步的Git教程视频。 下载  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;原版镜像下载，注意：官网下载速度比较慢，可">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://image-hanxinhahx.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/rest1.png?Expires=1588260745&OSSAccessKeyId=TMP.3KePtjEoCZYBdeJ52ytPQkaVVhp5Fs6qcfydjaEasoXjP9JNxvbLYd8fsZuWTFdtd1r6WpvQJgfUpuAAvQC1xmc3af4X5a&Signature=3fsS%252B0v5oH0r%252F7FV0mhfYfpubqk%253D">
-<meta property="og:image" content="https://image-hanxinhahx.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/reset2png.png?Expires=1588261562&OSSAccessKeyId=TMP.3KePtjEoCZYBdeJ52ytPQkaVVhp5Fs6qcfydjaEasoXjP9JNxvbLYd8fsZuWTFdtd1r6WpvQJgfUpuAAvQC1xmc3af4X5a&Signature=uyaALCBHMOHKB7bHYwLidJUB%252FBI%253D">
+<meta property="og:image" content="https://github.com/Hark-sc/image/blob/master/reset2.png">
 <meta property="article:published_time" content="2020-04-11T11:34:01.000Z">
-<meta property="article:modified_time" content="2020-04-30T15:41:33.243Z">
+<meta property="article:modified_time" content="2020-05-13T12:53:16.110Z">
 <meta property="article:author" content="hanxinhahx">
 <meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary">
@@ -85,7 +85,7 @@
             
 		</nav>
 		<nav>
-            总文章数 3
+            总文章数 4
         </nav>
 		<nav class="header-nav">
 			<div class="social">
@@ -194,7 +194,8 @@
 <p>   <img src="https://image-hanxinhahx.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/rest1.png?Expires=1588260745&OSSAccessKeyId=TMP.3KePtjEoCZYBdeJ52ytPQkaVVhp5Fs6qcfydjaEasoXjP9JNxvbLYd8fsZuWTFdtd1r6WpvQJgfUpuAAvQC1xmc3af4X5a&Signature=3fsS%2B0v5oH0r%2F7FV0mhfYfpubqk%3D" alt="reset"><br>   &nbsp;&nbsp;&nbsp;&nbsp;我们对一个文本文档进行了3次更改，3次提交，每一次提交都增加一行内容。可以使用gitreflog来查看我们的提交记录，那一串黄色的就是我们的索引，待会就是用它来回退版本的。找到你想要退回的版本，然后讲黄色的索引值进行复制，使用如下代码即可：</p>
    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 复制下来的索引值</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 <p>   &nbsp;&nbsp;&nbsp;&nbsp;假如只是退回上一个版本时，则可以在hard后面加HEAD就好了，其他的就用索引值。效果如下，用cat 文件名就可以查看文件中的内容了。</p>
-<p>   <img src="https://image-hanxinhahx.oss-cn-hangzhou.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/reset2png.png?Expires=1588261562&OSSAccessKeyId=TMP.3KePtjEoCZYBdeJ52ytPQkaVVhp5Fs6qcfydjaEasoXjP9JNxvbLYd8fsZuWTFdtd1r6WpvQJgfUpuAAvQC1xmc3af4X5a&Signature=uyaALCBHMOHKB7bHYwLidJUB%2FBI%3D" alt="reset"></p>
+<p>   <img src="https://github.com/Hark-sc/image/blob/master/reset2.png" alt="reset"></p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;下面是revert命令，他与reset不同的是：reset是直接跳过中间的版本，跳到你要的版本索引</p>
 <p>  正在更新，敬请期待！</p>
 
       
@@ -288,6 +289,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/07/03/JAVA%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JAVA网络编程
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/05/Guessgame/" id="article-nav-older" class="article-nav-link-wrap">
