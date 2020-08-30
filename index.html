@@ -80,7 +80,7 @@
             
 		</nav>
 		<nav>
-            总文章数 4
+            总文章数 5
         </nav>
 		<nav class="header-nav">
 			<div class="social">
@@ -159,6 +159,69 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-javaBigDecimal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/29/javaBigDecimal/">javaBigDecimal</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/29/javaBigDecimal/" class="archive-article-date">
+  	<time datetime="2020-08-29T15:25:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>&nbsp;&nbsp;当我们用double类型的数据去进行加、减、乘、除运算时，我们会发现，计算的结果会相较于我们预期的结果会有所偏差，如，我们用double类型的数据去进行”1.0-0.9“的结果为：0.09999999999999998而我们预期的结果是0.1，为什么会出现这种偏差哪？原因是在double类型的数据中会存一个近似值，而不是实际的值，所以计算结果也是一个近似值，就会出现这个偏差，虽然这个偏差在一些对精度要求不算高的程序中不会造成很大的结果，但是针对一些行业就会有十分大的影响，比如说金融业，相差一位也许就会相差很多的钱。那么，我们是如何解决这个问题的哪？使用BigDecimal（双精度精确计算类），来解决这个问题。看如下代码：<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//除法</span></span><br><span class="line"> BigDecimal bd1=<span class="keyword">new</span> BigDecimal(<span class="string">"10"</span>);</span><br><span class="line"> BigDecimal bd2=<span class="keyword">new</span> BigDecimal(<span class="string">"3"</span>);</span><br><span class="line"> BigDecimal r1=bd1.divide(bd2,<span class="number">3</span>,BigDecimal.ROUND_HALF_UP);<span class="comment">//四舍五入</span></span><br><span class="line"> System.out.println(r1);</span><br><span class="line"> <span class="comment">//减法</span></span><br><span class="line"> BigDecimal bd3=<span class="keyword">new</span> BigDecimal(<span class="string">"1.0"</span>);</span><br><span class="line"> BigDecimal bd4=<span class="keyword">new</span> BigDecimal(<span class="string">"0.9"</span>);</span><br><span class="line"> BigDecimal r2=bd3.subtract(bd4);</span><br><span class="line"> System.out.println(r2);<span class="comment">//结果为：0.1</span></span><br><span class="line"> <span class="comment">//原来用double的结果</span></span><br><span class="line"> <span class="keyword">double</span> a=<span class="number">1.0</span>;</span><br><span class="line"> <span class="keyword">double</span> b=<span class="number">0.9</span>;</span><br><span class="line"> <span class="keyword">double</span> r4=a-b;</span><br><span class="line"> System.out.println(r4);<span class="comment">//0.09999999999999998</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure><br>&nbsp;&nbsp;我们在使用的时候要创建BigDecimal对象，有几个变量进行运算就创建几个运算，在创建对象的时候将所要计算的量的字符串传到BigDecimal的构造方法中，因为BigDecimal本质上可以理解为就是对字符串进行处理、运算。<br>&nbsp;&nbsp;这里需要注意的是：我们现在创建的是对象，而不是基本数据类型，所以，我们不能用原来那些运算符进行操作，而是要用到对象的方法：最常用的是subtract（减）和divide（除）方法，将我们要进行运算的对象传入到方法中，它的返回值也是一个BigDecimal对象，当进行除运算的时候，我们可能会用到四舍五入的操作，我们这时就要用到3个参数的divide方法，第一个参数还是一个BigDecimal对象即要进行运算的对象，第二个是一个整数，表示要四舍五入到的小数位数，第三个是一个常量，已经封装到BigDecimal类中，BigDecimal.ROUND_HALF_UP表示四舍五入向上提升，这样就可以算出我们需要的小数位数了。<br>&nbsp;&nbsp;BigDecimal还有其他一些方法和用法，但我们常见的就是减运算和除运算了，有时间有精力的话可以把这个类的所有用法学完。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/29/javaBigDecimal/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-JAVA网络编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
