@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://hanxinhahx.club">
-  <title>Archives: 2020/7 | hanxinhahx</title>
+  <title>泛型 | hanxinhahx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人编程技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hanxinhahx">
-<meta property="og:url" content="http://hanxinhahx.club/archives/2020/07/index.html">
+  <meta name="description" content="泛型本质：参数化类型，把类型当参数传递语法：&lt;T……&gt;，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数常见形式：泛型类语法：1. 类名或&lt;T,E,K&gt;可以有多个泛型作为参数2. 可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值3.  使用泛型类的时候一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛型">
+<meta property="og:url" content="http://hanxinhahx.club/2020/09/03/%E6%B3%9B%E5%9E%8B/index.html">
 <meta property="og:site_name" content="hanxinhahx">
-<meta property="og:description" content="个人编程技术博客">
+<meta property="og:description" content="泛型本质：参数化类型，把类型当参数传递语法：&lt;T……&gt;，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数常见形式：泛型类语法：1. 类名或&lt;T,E,K&gt;可以有多个泛型作为参数2. 可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值3.  使用泛型类的时候一">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-03T08:50:32.000Z">
+<meta property="article:modified_time" content="2020-09-03T08:50:55.564Z">
 <meta property="article:author" content="hanxinhahx">
 <meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary">
@@ -158,49 +160,189 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-泛型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/03/JAVA%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-07-03T11:59:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/03/JAVA%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">JAVA网络编程</a>
+    <h1 class="article-title" itemprop="name">
+      泛型
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2020/09/03/%E6%B3%9B%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-09-03T08:50:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h2 id="本质：参数化类型，把类型当参数传递"><a href="#本质：参数化类型，把类型当参数传递" class="headerlink" title="本质：参数化类型，把类型当参数传递"></a>本质：参数化类型，把类型当参数传递</h2><h2 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h2><h3 id="lt-T……-gt-，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数"><a href="#lt-T……-gt-，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数" class="headerlink" title="&lt;T……&gt;，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数"></a>&lt;T……&gt;，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数</h3><h2 id="常见形式："><a href="#常见形式：" class="headerlink" title="常见形式："></a>常见形式：</h2><h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><h4 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h4><h4 id="1-类名或-lt-T-E-K-gt-可以有多个泛型作为参数"><a href="#1-类名或-lt-T-E-K-gt-可以有多个泛型作为参数" class="headerlink" title="1. 类名或&lt;T,E,K&gt;可以有多个泛型作为参数"></a>1. 类名<T>或&lt;T,E,K&gt;可以有多个泛型作为参数</T></h4><h4 id="2-可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值"><a href="#2-可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值" class="headerlink" title="2. 可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值"></a>2. 可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值</h4><h4 id="3-使用泛型类的时候一定要传入具体的引用数据类型数据，基本数据类型要使用包装类，在创建对象时，也要是该数据类型"><a href="#3-使用泛型类的时候一定要传入具体的引用数据类型数据，基本数据类型要使用包装类，在创建对象时，也要是该数据类型" class="headerlink" title="3.  使用泛型类的时候一定要传入具体的引用数据类型数据，基本数据类型要使用包装类，在创建对象时，也要是该数据类型"></a>3.  使用泛型类的时候一定要传入具体的引用数据类型数据，基本数据类型要使用包装类，在创建对象时，也要是该数据类型</h4><h4 id="4-不同的泛型不可以相互赋值"><a href="#4-不同的泛型不可以相互赋值" class="headerlink" title="4. 不同的泛型不可以相互赋值"></a>4. 不同的泛型不可以相互赋值</h4><h4 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> GenericTest;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GenericClass</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 泛型类，类的代码</span></span><br><span class="line"><span class="comment">     * 语法：类名&lt;T&gt;或&lt;T,E,K&gt;可以有多个泛型作为参数</span></span><br><span class="line"><span class="comment">     * 泛型 只可以是引用数据类型，是占位符</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//创建泛型变量</span></span><br><span class="line">    T t;</span><br><span class="line">    <span class="comment">//泛型作为方法的参数</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(T t)</span></span>&#123;</span><br><span class="line">        System.out.println(t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//泛型作为方法的返回值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getT</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试代码</span></span><br><span class="line"><span class="keyword">package</span> GenericTest;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GenericClassTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建泛型类的对象，创建对象时一定要在类名后的尖括号内传入具体的引用数据类型</span></span><br><span class="line">        GenericClass&lt;String&gt; genericClass=<span class="keyword">new</span> GenericClass();</span><br><span class="line">        genericClass.t=<span class="string">"你好"</span>;<span class="comment">//一定要赋给与类的泛型的数据类型一致的数据</span></span><br><span class="line">        <span class="comment">//调用方法</span></span><br><span class="line">        genericClass.show(genericClass.t);</span><br><span class="line">        System.out.println(genericClass.getT());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><h4 id="语法：-2"><a href="#语法：-2" class="headerlink" title="语法："></a>语法：</h4><h4 id="1-接口名也可以是多个泛型"><a href="#1-接口名也可以是多个泛型" class="headerlink" title="1. 接口名也可以是多个泛型"></a>1. 接口名<T>也可以是多个泛型</T></h4><h4 id="2-不能在接口中创建泛型常量，因为不知道泛型具体的类型"><a href="#2-不能在接口中创建泛型常量，因为不知道泛型具体的类型" class="headerlink" title="2. 不能在接口中创建泛型常量，因为不知道泛型具体的类型"></a>2. 不能在接口中创建泛型常量，因为不知道泛型具体的类型</h4><h4 id="3-在实现接口的时候要把泛型具体的类型传入尖括号中（也可以不指定泛型的具体类型，但要把实现类改为泛型类，在创建这个类的时候一定要指明泛型给类型）"><a href="#3-在实现接口的时候要把泛型具体的类型传入尖括号中（也可以不指定泛型的具体类型，但要把实现类改为泛型类，在创建这个类的时候一定要指明泛型给类型）" class="headerlink" title="3. 在实现接口的时候要把泛型具体的类型传入尖括号中（也可以不指定泛型的具体类型，但要把实现类改为泛型类，在创建这个类的时候一定要指明泛型给类型）"></a>3. 在实现接口的时候要把泛型具体的类型传入尖括号中（也可以不指定泛型的具体类型，但要把实现类改为泛型类，在创建这个类的时候一定要指明泛型给类型）</h4><h4 id="测试代码-1"><a href="#测试代码-1" class="headerlink" title="测试代码"></a>测试代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> GenericTest;</span><br><span class="line"><span class="comment">//泛型接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GenericInterface</span>&lt;<span class="title">T</span>&gt; </span>&#123;<span class="comment">//在尖括号内写泛型</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//可以用泛型作为方法的参数和返回值类型</span></span><br><span class="line">    <span class="function">T <span class="title">get</span><span class="params">(T t)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> GenericTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GInterfaceTest</span> <span class="keyword">implements</span> <span class="title">GenericInterface</span>&lt;<span class="title">String</span>&gt;</span>&#123;<span class="comment">//将泛型类指定具体的类型</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实现类</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"这是泛型接口实现类"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">get</span><span class="params">(String s)</span> </span>&#123;<span class="comment">//将泛型类指定具体的类型</span></span><br><span class="line">        System.out.println(s);</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> GenericTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 测试类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        GInterfaceTest gInterfaceTest=<span class="keyword">new</span> GInterfaceTest();</span><br><span class="line">        System.out.println(gInterfaceTest.get(<span class="string">"张三"</span>));</span><br><span class="line">        gInterfaceTest.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><h4 id="语法：-3"><a href="#语法：-3" class="headerlink" title="语法："></a>语法：</h4><h4 id="1-返回值类型-方法名-方法体。泛型也可以是多个，这样就可以在次方法中创建泛型的变量了，而作用域也在这个泛型内（在普通类中）"><a href="#1-返回值类型-方法名-方法体。泛型也可以是多个，这样就可以在次方法中创建泛型的变量了，而作用域也在这个泛型内（在普通类中）" class="headerlink" title="1.  返回值类型 方法名 方法体。泛型也可以是多个，这样就可以在次方法中创建泛型的变量了，而作用域也在这个泛型内（在普通类中）"></a>1. <T> 返回值类型 方法名 方法体。泛型也可以是多个，这样就可以在次方法中创建泛型的变量了，而作用域也在这个泛型内（在普通类中）</T></h4><h4 id="2-返回值也可以是泛型，返回值不需要自己明确，根据参数自动明确类型"><a href="#2-返回值也可以是泛型，返回值不需要自己明确，根据参数自动明确类型" class="headerlink" title="2. 返回值也可以是泛型，返回值不需要自己明确，根据参数自动明确类型"></a>2. 返回值也可以是泛型，返回值不需要自己明确，根据参数自动明确类型</h4><h4 id="测试代码-2"><a href="#测试代码-2" class="headerlink" title="测试代码"></a>测试代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> GenericTest;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GenericMethods</span> </span>&#123;</span><br><span class="line">        <span class="keyword">public</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">(T t)</span></span>&#123;<span class="comment">//如果不在public后加泛型，则不能在方法中使用泛型</span></span><br><span class="line">            System.out.println(t);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        GenericMethods genericMethods=<span class="keyword">new</span> GenericMethods();</span><br><span class="line">        genericMethods.show(<span class="string">"hello"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="泛型集合"><a href="#泛型集合" class="headerlink" title="泛型集合"></a>泛型集合</h3><h4 id="概念：参数化类型、类型安全的集合，强制集合的类型必须一致"><a href="#概念：参数化类型、类型安全的集合，强制集合的类型必须一致" class="headerlink" title="概念：参数化类型、类型安全的集合，强制集合的类型必须一致"></a>概念：参数化类型、类型安全的集合，强制集合的类型必须一致</h4><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
+<li>编译时即可检查，而非运行时抛出异常</li>
+<li>访问时不必类型转换（拆箱）</li>
+<li>不同泛型引用之间不能相互赋值，泛型不存在多态<h2 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h2><h3 id="1-提高代码的重用性"><a href="#1-提高代码的重用性" class="headerlink" title="1. 提高代码的重用性"></a>1. 提高代码的重用性</h3><h3 id="2-防止类型转换异常，提高代码的安全性"><a href="#2-防止类型转换异常，提高代码的安全性" class="headerlink" title="2. 防止类型转换异常，提高代码的安全性"></a>2. 防止类型转换异常，提高代码的安全性</h3></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://hanxinhahx.club/2020/09/03/%E6%B3%9B%E5%9E%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/08/29/javaBigDecimal/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javaBigDecimal</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#泛型"><span class="toc-number">1.</span> <span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#本质：参数化类型，把类型当参数传递"><span class="toc-number">1.1.</span> <span class="toc-text">本质：参数化类型，把类型当参数传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语法："><span class="toc-number">1.2.</span> <span class="toc-text">语法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lt-T……-gt-，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数"><span class="toc-number">1.2.1.</span> <span class="toc-text">&lt;T……&gt;，T为类型占用符，是一种引用数据类型，也可以传入多个泛型，中间用逗号隔开，在运行过程中会转为实际的参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见形式："><span class="toc-number">1.3.</span> <span class="toc-text">常见形式：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型类"><span class="toc-number">1.3.1.</span> <span class="toc-text">泛型类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法：-1"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-类名或-lt-T-E-K-gt-可以有多个泛型作为参数"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">1. 类名或&lt;T,E,K&gt;可以有多个泛型作为参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">2. 可以创建变量（不可以用new关键字来创建对象，因为不能确定T具体的类型），也可以作为方法的参数，还可以作为方法的返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-使用泛型类的时候一定要传入具体的引用数据类型数据，基本数据类型要使用包装类，在创建对象时，也要是该数据类型"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">3.  使用泛型类的时候一定要传入具体的引用数据类型数据，基本数据类型要使用包装类，在创建对象时，也要是该数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-不同的泛型不可以相互赋值"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">4. 不同的泛型不可以相互赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试代码"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">测试代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型接口"><span class="toc-number">1.3.2.</span> <span class="toc-text">泛型接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法：-2"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-接口名也可以是多个泛型"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">1. 接口名也可以是多个泛型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-不能在接口中创建泛型常量，因为不知道泛型具体的类型"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">2. 不能在接口中创建泛型常量，因为不知道泛型具体的类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-在实现接口的时候要把泛型具体的类型传入尖括号中（也可以不指定泛型的具体类型，但要把实现类改为泛型类，在创建这个类的时候一定要指明泛型给类型）"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">3. 在实现接口的时候要把泛型具体的类型传入尖括号中（也可以不指定泛型的具体类型，但要把实现类改为泛型类，在创建这个类的时候一定要指明泛型给类型）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试代码-1"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">测试代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型方法"><span class="toc-number">1.3.3.</span> <span class="toc-text">泛型方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法：-3"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-返回值类型-方法名-方法体。泛型也可以是多个，这样就可以在次方法中创建泛型的变量了，而作用域也在这个泛型内（在普通类中）"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">1.  返回值类型 方法名 方法体。泛型也可以是多个，这样就可以在次方法中创建泛型的变量了，而作用域也在这个泛型内（在普通类中）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-返回值也可以是泛型，返回值不需要自己明确，根据参数自动明确类型"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">2. 返回值也可以是泛型，返回值不需要自己明确，根据参数自动明确类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试代码-2"><span class="toc-number">1.3.3.4.</span> <span class="toc-text">测试代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型集合"><span class="toc-number">1.3.4.</span> <span class="toc-text">泛型集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#概念：参数化类型、类型安全的集合，强制集合的类型必须一致"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">概念：参数化类型、类型安全的集合，强制集合的类型必须一致</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特点："><span class="toc-number">1.3.4.2.</span> <span class="toc-text">特点：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#好处"><span class="toc-number">1.4.</span> <span class="toc-text">好处</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-提高代码的重用性"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 提高代码的重用性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-防止类型转换异常，提高代码的安全性"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 防止类型转换异常，提高代码的安全性</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://hanxinhahx.club/2020/09/03/%E6%B3%9B%E5%9E%8B/", 
+    sourceId: "泛型",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -223,8 +365,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
